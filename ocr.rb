@@ -1,6 +1,4 @@
-
-buzz1710 [5:27 PM] 
-```def parse_string
+def parse_string
 
   #read the input file and split into an array of account numbers
   input = IO.read("input.txt").gsub("\n","").scan(/.{108}/m)
@@ -34,5 +32,3 @@ buzz1710 [5:27 PM]
 end
 
 parse_string
-```
-(edited)
