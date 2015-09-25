@@ -29,14 +29,14 @@ def parse_string
 
     end
     output << parsed_number
-    output << valid_number?(parsed_number)
+    output << status(parsed_number)
     output << "\n"
   end
 
   puts output
 end
 
-def valid_number?(number)
+def status(number)
   reversed = number.reverse
   result = 0
   if reversed.include?('?')
