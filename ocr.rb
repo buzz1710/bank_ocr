@@ -2,8 +2,6 @@ def parse_string
 
   #read the input file and split into an array of account numbers
   input = IO.read("input.txt").gsub("\n","").scan(/.{108}/)
-  valid = ""
-  invalid = ""
   output = ""
 
   mappings = { "_| ||_|" => "0",
@@ -47,11 +45,7 @@ def valid_number?(number)
     for i in 1..9
       result += reversed[i-1].to_i * i
     end
-    if (result % 11 == 0)
-      return ""
-    else
-      return " ERR"
-    end
+    result % 11 == 0 ? "" : " ERR"
   end
 end
 
